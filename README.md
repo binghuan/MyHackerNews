@@ -22,11 +22,16 @@ The data source for the project is from "https://github.com/HackerNews/API"
 ## Demo 
 ![](./pictures/demo_20211205.gif)
 
-## Test Cases
-Threre are 3 files in project. 
+## How to Run Test
+```shell 
+xcodebuild test  -scheme 'myhackernews' -destination 'platform=iOS Simulator,name=iPhone 8,OS=15.0'
+```
+Related files in project. 
 - ./myhackernewsTests/myhackernewsTests.swift
   - testFetchItem
 - ./myhackernewsUITests/myhackernewsUITests.swift  
   - testLoadingItems
 - ./myhackernewsUITests/myhackernewsUITestsLaunchTests.swift  
   - testLaunch
+
+
