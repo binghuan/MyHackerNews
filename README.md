@@ -5,7 +5,7 @@ Simple File Storage Server
 This is a simple hackerNews application for listing new stories.
 
 ![](./pictures/Slide5.png)
-## The main components that need to be completed
+## The main components
 ![](./pictures/Slide8.png)
 
 ## API to Get New Stories
