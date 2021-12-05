@@ -3,7 +3,8 @@ Simple File Storage Server
 ================================================
 
 This is a simple hacker news iOS application for listing new stories.  
-The data source for the project is from "https://github.com/HackerNews/API"
+The app is built with SwiftUI.  
+Data source for the project is from "https://github.com/HackerNews/API"
 
 ## Features:
 - Users can read news from the HackerNews application.
