@@ -22,6 +22,11 @@ The data source for the project is from "https://github.com/HackerNews/API"
 ## Demo 
 ![](./pictures/demo_20211205.gif)
 
+## How to build the app
+- Open myhackernews.xcodeproj via XCode
+- Press the start button to build and run and app
+![](./pictures/start_and_run.png)
+
 ## How to Run Test
 ```shell 
 xcodebuild test  -scheme 'myhackernews' -destination 'platform=iOS Simulator,name=iPhone 8,OS=15.0'
