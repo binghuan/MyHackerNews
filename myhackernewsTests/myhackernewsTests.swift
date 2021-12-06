@@ -18,6 +18,22 @@ class myhackernewsTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
+    func testFetchStories() throws {
+        
+        let expectation = XCTestExpectation(description: "Fetch Item by ID")
+        
+        let maxNumberOfItems = 10;
+        fetchNewStories(maxNumberOfItems: maxNumberOfItems,  progressString: { progressStatus in
+            print("progressStatus:\(progressStatus)")
+        }, completion: { (items) in
+            print("------- Stories Fetched -------")
+            XCTAssertTrue(items.count == maxNumberOfItems)
+            expectation.fulfill()
+        })
+        
+        // Wait until the expectation is fulfilled, with a timeout of 10 seconds.
+        wait(for: [expectation], timeout: 10.0)
+    }
     
     func testFetchItem() throws {
         // This is an example of a functional test case.
@@ -29,6 +45,24 @@ class myhackernewsTests: XCTestCase {
         fetchItemByID(itemId: 29440830, rank: 1, startedDate: NSDate(), completion: { item in
             print("Get item: \(item)")
             XCTAssertTrue(item.id == 29440830)
+            expectation.fulfill()
+        })
+        
+        // Wait until the expectation is fulfilled, with a timeout of 10 seconds.
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testFetchItems() throws {
+        
+        let expectation = XCTestExpectation(description: "Fetch Items by IDs")
+        
+        let itemsToAcquire: [NSNumber] = [29455527, 29455493]
+        
+        fetchItems(itemIds: itemsToAcquire, onProgress: { progress in
+            print(progress)
+        }, completion: { items in
+            XCTAssertTrue(items[0].id == 29455527 || items[0].id == 29455493)
+            XCTAssertTrue(items[1].id == 29455527 || items[1].id == 29455493)
             expectation.fulfill()
         })
         

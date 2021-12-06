@@ -35,6 +35,8 @@ xcodebuild test  -scheme 'myhackernews' -destination 'platform=iOS Simulator,nam
 Related files in project. 
 - ./myhackernewsTests/myhackernewsTests.swift
   - testFetchItem
+  - testFetchItems
+  - testFetchStories
 - ./myhackernewsUITests/myhackernewsUITests.swift  
   - testLoadingItems
 - ./myhackernewsUITests/myhackernewsUITestsLaunchTests.swift  

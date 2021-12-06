@@ -23,11 +23,9 @@ func fetchNewStories( maxNumberOfItems : Int , progressString: @escaping (String
                 // Slice Array
                 let itemsToAcquire = Array(kids[0 ..< maxNumberOfItems])
                 
-                fetchItems(itemIds: itemsToAcquire,
-                           onProgress: { progress in
+                fetchItems(itemIds: itemsToAcquire, onProgress: { progress in
                     progressString("\(progress)/\(itemsToAcquire.count)")
-                },
-                           completion: { items in
+                }, completion: { items in
                     print("OK> All items are fetched!")
                     completion(items)
                 })

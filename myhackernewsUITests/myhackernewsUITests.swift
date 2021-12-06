@@ -9,6 +9,7 @@ import XCTest
 
 class myhackernewsUITests: XCTestCase {
     
+    
     let app = XCUIApplication()
     
     override func setUpWithError() throws {
@@ -25,6 +26,7 @@ class myhackernewsUITests: XCTestCase {
     }
     
     func testLoading() throws {
+        
         // UI tests must launch the application that they test.
         app.launch()
         
