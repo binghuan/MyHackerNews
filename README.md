@@ -1,5 +1,5 @@
 ![](./pictures/Icon-256.jpg)  
-Simple File Storage Server
+My Hacker News
 ================================================
 
 This is a simple hacker news iOS application for listing new stories.  
