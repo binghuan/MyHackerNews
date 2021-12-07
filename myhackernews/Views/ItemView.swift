@@ -13,7 +13,7 @@ struct ItemView: View {
     let currentDate:NSDate
     func checkHowLongAgo(time: Int64) -> String {
         let diff = currentDate.timeIntervalSince1970 - Double(item.time)
-        return getDiffTimeInString(diffInSeconds: Int(diff))
+        return DataRequester.getDiffTimeInString(diffInSeconds: Int(diff))
     }
     
     let DEFAULT_URL = "_"

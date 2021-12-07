@@ -62,7 +62,7 @@ struct ContentView: View {
                 Spacer()
             }
         }.onAppear(perform: {
-            fetchNewStories(maxNumberOfItems: MAX_ITEMS,  progressString: { progressStatus in
+            DataRequester.fetchNewStories(maxNumberOfItems: MAX_ITEMS,  progressString: { progressStatus in
                 self.progressStatus = progressStatus
             }, completion: { (items) in
                 print("------- fetchNewStories -------")
