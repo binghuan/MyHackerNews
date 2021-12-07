@@ -23,7 +23,7 @@ class myhackernewsTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Fetch Item by ID")
         
         let maxNumberOfItems = 10;
-        fetchNewStories(maxNumberOfItems: maxNumberOfItems,  progressString: { progressStatus in
+        DataRequester.fetchNewStories(maxNumberOfItems: maxNumberOfItems,  progressString: { progressStatus in
             print("progressStatus:\(progressStatus)")
         }, completion: { (items) in
             print("------- Stories Fetched -------")
@@ -42,7 +42,7 @@ class myhackernewsTests: XCTestCase {
         // Create an expectation for a background download task.
         let expectation = XCTestExpectation(description: "Fetch Item by ID")
         
-        fetchItemByID(itemId: 29440830, rank: 1, startedDate: NSDate(), completion: { item in
+        DataRequester.fetchItemByID(itemId: 29440830, rank: 1, startedDate: NSDate(), completion: { item in
             print("Get item: \(item)")
             XCTAssertTrue(item.id == 29440830)
             expectation.fulfill()
@@ -58,7 +58,7 @@ class myhackernewsTests: XCTestCase {
         
         let itemsToAcquire: [NSNumber] = [29455527, 29455493]
         
-        fetchItems(itemIds: itemsToAcquire, onProgress: { progress in
+        DataRequester.fetchItems(itemIds: itemsToAcquire, onProgress: { progress in
             print(progress)
         }, completion: { items in
             XCTAssertTrue(items[0].id == 29455527 || items[0].id == 29455493)
