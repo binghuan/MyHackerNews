@@ -25,7 +25,7 @@ Data source for the project is from "https://github.com/HackerNews/API"
 
 ## How to build the app
 - Open myhackernews.xcodeproj via XCode
-- Press the start button to build and run and app
+- Press the start button to build and run the app
 ![](./pictures/start_and_run.png)
 
 ## How to Run Test
