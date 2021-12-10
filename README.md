@@ -6,6 +6,21 @@ This is a simple hacker news iOS application for listing new stories.
 The app is built with SwiftUI.  
 Data source for the project is from "https://github.com/HackerNews/API"
 
+## Table of Contents
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+- [My Hacker News](#my-hacker-news)
+  - [Table of Contents](#table-of-contents)
+  - [Features:](#features)
+  - [The main components](#the-main-components)
+  - [API to Get New Stories](#api-to-get-new-stories)
+  - [API to fetch Item](#api-to-fetch-item)
+  - [Illustration](#illustration)
+  - [Demo](#demo)
+  - [How to build the app](#how-to-build-the-app)
+  - [How to Run Test](#how-to-run-test)
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Features:
 - Users can read news from the HackerNews application.
 - The app presents these stories to users in descending order.  
